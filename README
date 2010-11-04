@@ -21,7 +21,7 @@ errorHandler deadLetterChannel("mock:error")
 			to "seda:b"
 		}
 		when { in.header.foo == "cheese" } {
-			to "seda.c"
+			to "seda:c"
 		}
 		otherwise {
 			to "seda:d"
